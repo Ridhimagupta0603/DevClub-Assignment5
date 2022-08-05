@@ -1,0 +1,31 @@
+{% extends 'Users/instructor.html' %}
+{% block content%}
+    
+
+<br><br><br>
+<div class="jumbotron container">
+    <h5> Upload Files here:</h5>
+<form method="POST" action="" enctype="multipart/form-data">
+    {% csrf_token %}
+    <label><h6>File name:</h6></label>
+    {{form.file_name}}<br>
+    <br>
+    {{form.file}}<br><br>
+    <input type="submit">
+</form>
+</div>
+<br>
+
+<div>
+    <a href="{% url 'Documents:instdoclist'%}"style="text-decoration:none"><h3 style="text-align:center;color:brown;font-family:'Courier New', Courier, monospace">Click to View/Download uploaded Files</h3></a>
+</div>
+
+{%endblock%}
+
+
+
+
+
+
+
+

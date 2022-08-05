@@ -1,0 +1,15 @@
+{%extends 'Users/instructor.html'%}
+{% block content%}
+<table>
+    <tr><th>Documents</th>
+    <th>Download link</th></tr>
+{% for d in doc%}
+ <tr>
+    <td>{{d.file_name}} </td>
+    <td><a href="{{d.file.url}}" download>Download</a></td>
+    
+    <tr>
+{%endfor%}
+</table>
+
+{%endblock%}
