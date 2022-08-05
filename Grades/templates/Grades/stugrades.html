@@ -1,0 +1,27 @@
+{%extends 'Users/student.html'%}
+{% block content%}<br><br>
+<h3 style="margin-left:20px;color:brown; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">Course Grades :</h3>
+    <table class="grades">
+        <tr >
+            <th>Course</th>
+            <th>Credit</th>
+            <th>Grades</th>
+        </tr>
+        
+    {% for x in ga%}
+    
+    <tr>
+        <td>{{x.course.course_name}}</td>
+        <td>{{x.course.credit}}</td>
+        <td>{{x.course_grade}}</td>
+
+    </tr>
+    {% endfor%}
+    <tr><td> </td><td style="font-weight:700">CGPA:</td><td style="font-weight:800">{{a}}</td></tr>
+    
+    </table>
+
+
+{% endblock%}
+
+

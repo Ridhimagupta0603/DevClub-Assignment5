@@ -1,0 +1,34 @@
+{%extends 'Users/instructor.html'%}
+{%block content%}
+<div style="width:70%; margin:0 auto;">
+	<form action="/grades/instgrades/" method="POST" id="updatemarks_form">
+		{% csrf_token %}
+		
+		<h4 style="text-align: center;"> Marks: </h4>
+		<div style=" overflow-x: auto;">
+			<table>
+                {%for x in gr%}
+				
+				   	<tr>
+				   		<td><label>{{x.student.username}}</label></td>
+				   		<td><label>{{x.course.course_name}}</label></td>
+				   		
+					    
+					        <td>
+								{% with course_grade=x.course_grade %}
+									<input style="text-align: center;" value="{{course_grade}}" type="number" name="course_grade" required>
+								{% endwith %}
+					       	</td>
+				    </tr>
+			    
+			    {%endfor%}
+
+			</table>
+		</div>
+		<button class="btn btn-success" type="submit" style="float: right;width: 100px;" >  Save  </button>
+		<a href="/authenticated/" style="float: left;"  class="btn btn-danger">Back to Home</a>
+	</form>
+
+
+
+{% endblock%}

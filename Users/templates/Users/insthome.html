@@ -1,0 +1,54 @@
+{% extends 'Users/instructor.html'%}
+{% block content %}
+<div>
+    <br><img src="https://moodle.iitd.ac.in/theme/image.php/clean/core/1629522517/u/f1" style="margin-left:60px;float:left">
+    <p style="font-weight:500;color:rgb(25, 22, 22);margin-top:100px;margin-left:20px;font-size:x-large">  Welcome {{instructor.username}}</p>
+    </div>
+    <div style="float:right; margin:40px;border:3px solid black;padding:12px;border-radius: 10px;">
+        <h4>Announcements</h4>
+        <ol>
+        {% for a in announcement%}
+        <li><b>{{a.title}}</b> <br> Posted-by- {{a.posted_by}}<br>Course- {{a.course}}
+        </li>
+        
+        
+        {%endfor%}</ol>
+        
+    </div>
+    <br><br>
+    <div class="container">
+        <div class=card-deck>
+      <div class="card" style="width: 18rem; ">
+        <div class="card-body">
+          <h5 class="card-title">Publish Grades</h5>
+          <p class="card-text">Add grades of student</p><br>
+          <a href="{% url 'Grades:addgrades'%}" class="btn btn-primary">Publish</a>
+        </div>
+      </div>
+
+      <div class="card" style="width: 18rem; ">
+        <div class="card-body">
+          <h5 class="card-title">Announcements</h5>
+          <p class="card-text">Messages and Announcements</p><br>
+          <a href="{% url 'announcements:send'%}" class="btn btn-primary">Announce</a>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem; ">
+        <div class="card-body">
+          <h5 class="card-title">Quizzes</h5>
+          <p class="card-text">Quizzes, Test, Majors, Minors</p><br>
+          <a href="{% url 'Quizzes:addQuestion'%}" class="btn btn-primary">Announce</a>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem; ">
+        <div class="card-body">
+          <h5 class="card-title">Documents</h5>
+          <p class="card-text">Upload Documents, Learning Resources, Study Material</p>
+          <a href="{% url 'Documents:instdoc'%}" class="btn btn-primary">Upload</a>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    
+{% endblock%}

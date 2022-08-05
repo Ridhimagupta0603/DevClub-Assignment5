@@ -1,0 +1,51 @@
+.topnav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: rgb(245, 118, 71);
+  
+  top: 0;
+  width: 100%;
+}
+#wel {
+  float:left;
+  padding: 14px 16px;
+  color:white;
+}
+.topnav li {
+  float: right;
+  display: block;
+  color: white;
+}
+
+.topnav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.topnav li a:hover:not(.active) {
+  background-color: rgb(235, 115, 71);
+}
+
+table {
+border-collapse: collapse;
+width: 50%;
+border: 2px solid black;
+margin:100px;
+}
+th{
+    background-color: rgb(249, 106, 106);
+    color: white;
+}
+th, td {
+padding: 8px;
+text-align: left;
+border-bottom: 1px solid #ddd;
+}
+
+tr:hover {background-color: coral;}
+

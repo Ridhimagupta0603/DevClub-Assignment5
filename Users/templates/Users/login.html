@@ -1,0 +1,55 @@
+{%extends 'Users/base.html'%}
+{%block content%}
+
+<div class="login">
+    
+    <img src="https://devclub.in/static/media/logo.bc35fc08.png" style="float:left;margin-top: 150px;margin-left: 20px;"><br><br>
+      <h1 style="text-align: center; color:orangered;"><b> DevClubLMS</b></h1>
+    
+     
+</div>
+
+
+	
+<div class="container">    
+    <div id="loginbox" style="margin-top:50px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">                    
+        <div class="panel panel-info" >
+                <div class="panel-heading" style="background:rgba(242, 89, 19, 0.903);">
+                    <div style="margin-left: 0px; color:rgb(255,255,255); ">LOGIN</div>
+                </div>     
+
+                <div style="padding-top:30px; " class="panel-body" >
+
+                    <div style="display:none" id="login-alert" class="alert alert-danger col-sm-12"></div>
+                        
+                    <form action="/login/" method="post" id="loginform" class="form-horizontal" role="form">
+                        {% csrf_token %}
+                        <div style="margin-bottom: 25px" class="input-group">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                    <input id="username" name="user_name" type="text" placeholder="Username"  class="form-control" required>                       
+                        </div>
+                            
+                        <div style="margin-bottom: 25px" class="input-group">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                                    <input id="pwd" name="password" type="password" placeholder="Password" class="form-control" required>
+                                </div>
+                        <select name="role" class="form-control" style="width:40%;">
+						 	<option value="student">Student</option>
+						 	<option value="instructor">Instructor</option>
+						 	<option value="admin">Admin</option>
+						</select><br>
+
+                            <div style="margin-top:10px;" class="form-group">
+                               
+                                <div class="col-sm-12 controls">
+                                	<button class="btn btn-danger" type="submit" style="width: 100px;background:rgb(240, 91, 5);" >  Login  </button>
+                                </div>
+                            </div>   
+                        </form>     
+                    </div>                     
+                </div>  
+        </div> 
+    </div>
+
+
+{%endblock%}

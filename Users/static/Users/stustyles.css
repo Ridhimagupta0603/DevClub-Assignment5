@@ -1,0 +1,104 @@
+
+.topnav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: rgb(245, 118, 71);
+  
+  top: 0;
+  width: 100%;
+}
+#wel {
+  float:left;
+  padding: 14px 16px;
+  color:white;
+}
+.topnav li {
+  float: right;
+  display: block;
+  color: white;
+}
+
+.topnav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.topnav li a:hover:not(.active) {
+  background-color: rgb(235, 115, 71);
+  text-decoration: none;
+  color: white;
+}
+table {
+border-collapse: collapse;
+width: 50%;
+border: 2px solid black;
+margin:100px;
+}
+th{
+    background-color: rgb(249, 106, 106);
+    color: white;
+}
+th, td {
+padding: 8px;
+text-align: left;
+border-bottom: 1px solid #ddd;
+}
+
+tr:hover {background-color: coral;
+}
+
+.card{
+  border-radius: 4px;
+  background: #fff;
+  box-shadow: 0 6px 10px rgba(0,0,0,.08), 0 0 6px rgba(0,0,0,.05);
+    transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
+padding: 14px 80px 18px 36px;
+cursor: pointer;
+}
+
+.card:hover{
+   transform: scale(1.05);
+box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+}
+
+.card h3{
+font-weight: 600;
+}
+
+.card img{
+position: absolute;
+top: 20px;
+right: 15px;
+max-height: 120px;
+}
+
+
+
+.card-3{
+ background-image: url(https://ionicframework.com/img/getting-started/theming-card.png);
+    background-repeat: no-repeat;
+  background-position: right;
+  background-size: 80px;
+}
+
+@media(max-width: 990px){
+.card{
+  margin: 20px;
+}
+} 
+
+
+@media (min-width: 1200px) {
+  .container{
+      max-width: 500px;
+  }
+}
+
+
+
+

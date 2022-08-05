@@ -1,0 +1,45 @@
+{%extends 'Users/student.html'%}
+{% block content %}
+
+<div>
+    <br><img src="https://moodle.iitd.ac.in/theme/image.php/clean/core/1629522517/u/f1" style="margin-left:60px;float:left">
+    <p style="font-weight:500;color:black;margin-top:100px;margin-left:20px;font-size:x-large; ">  Welcome {{student.username}}</p>
+
+    <div style="float:right; margin:40px;border:3px solid black;padding:12px;border-radius: 10px;">
+        <h4>Announcements</h4>
+        <ol>
+        {% for a in announcement%}
+        <li><b>{{a.title}}</b> <br> Posted-by- {{a.posted_by}}<br>Course- {{a.course}}</li>
+        
+        {%endfor%}</ol>
+        
+    </div>
+    
+    
+       
+</div>
+
+
+    
+
+
+<div class=" container"><br>
+    <h2 style="text-align:center">My Courses</h2><br>
+    <div class="row">
+      {% for x in mycourse%}
+      <div class="col-md-4">
+        <div class="card card-3 mt-4">
+          <h3>{{x.course_name}}</h3>
+          <p>Credit:  {{x.credit}}</p><br>
+          <p>Instructor: {{x.instructor.username}}</p>
+        </div>
+      </div>
+      
+      {%endfor%}
+    </div>
+    
+  </div>
+  <br><br><br><br><br><br>
+        
+
+{% endblock%}

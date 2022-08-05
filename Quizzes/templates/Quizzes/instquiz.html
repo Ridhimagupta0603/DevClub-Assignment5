@@ -1,0 +1,34 @@
+{% extends 'Users/instructor.html' %}
+ 
+{% block content %}
+ <br><br><br><br><br>
+<div class=" container row">
+    <div class="col-md-6">
+        <h1 style="color:brown"><u>Add Quiz Question</u></h1><br><br>
+        <div class="card card-body ">
+           <form action="" method="POST">
+              {% csrf_token %}
+                {{form.as_p}}
+                <br>
+             <input type="submit" name="Submit">
+             </form>
+            </div>
+        </div>
+    </div>
+ 
+</div>
+<br><br>
+<h1 style="text-align:center; color:brown;"> Question Bank</h1>
+<ol>
+{% for q in questions%}
+<li style="margin: 20px; font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;"><b>{{ q.question}}</b></li>
+<ol><li>{{q.op1}}</li>
+<li>{{q.op2}}</li>
+<li>{{q.op3}}</li>
+<li>{{q.op4}}</li>
+Ans is {{q.ans}}
+</ol>
+{%endfor%}
+</ol>
+ 
+{% endblock %}

@@ -1,0 +1,39 @@
+{% extends 'Users/instructor.html' %}
+ 
+{% block content %}
+ <br><br><br><br><br>
+<div class="container row ml-5">
+    <div class="col-md-6">
+        <h1 style="border:2px solid black; padding:20px;text-align:center;">Publish grades</h1>
+        <div class="card card-body">
+           <form action="" method="POST">
+              {% csrf_token %}
+                {{form.as_p}}
+                <br>
+             <input type="submit" name="Submit">
+             </form>
+            </div>
+        </div>
+    </div>
+ 
+</div><br><br><br>
+ <h2 style="text-align:center;color:brown"> List of Student's Grades</h2>
+<table class="grades" style="margin-left:auto;margin-right:auto">
+    <tr >
+        <th>Course</th>
+        <th>Credit</th>
+        <th>Student</th>
+        <th>Grades</th>
+    </tr>
+{% for x in g%}
+<tr>
+    <td>{{x.course.course_name}}</td>
+    <td>{{x.course.credit}}</td>
+    <td>{{x.student.username}}</td>
+
+    <td>{{x.course_grade}}</td>
+
+</tr>
+{%endfor%}
+</table>
+{% endblock %}
