@@ -50,30 +50,30 @@ Try to implement as many features as you can, but make sure to plan the structur
 - Guide for [Postman Documenter](https://learning.postman.com/docs/publishing-your-api/documenting-your-api/)
 
 
-Instructions to use lmsdevclub:
-Student
-Login with kerberos id as username and password both same. 
-Eg-username-ee3210717 password-ee3210717 select student in dropdown and login
-You will see all your registered courses in dashboard
-CLick on Grades in navbar to see your grades
-Click on Announcemnets to see all the messages and announcemnets
-Click on Quiz to start your quiz
-click on Documents to View/Download uploaded assignments and study material
-Click on Dashboard to return to homepage
+#Instructions to use lmsdevclub:
+#Student
+-Login with kerberos id as username and password both same. 
+-Eg-username-ee3210717 password-ee3210717 select student in dropdown and login
+-You will see all your registered courses in dashboard
+-CLick on Grades in navbar to see your grades
+-Click on Announcemnets to see all the messages and announcemnets
+-Click on Quiz to start your quiz
+-click on Documents to View/Download uploaded assignments and study material
+-Click on Dashboard to return to homepage
 
-Instructor
-Login with username as coursename_instructor and password as coursenameabcd
-Eg- Username-COL100_instructor Password-col100abcd select Instructor in dropdown Login
-Click on Publish /Grades to publish grades as well as see the existing grades
-Click on Documents to View/Download/upload Documents/studymaterial etc
-Click on Quizzes to add Questions and see QuestionBank
-Click on Announcements to announce and send messages to all the students and also view existing announcements
-Click on Dashboard to return to homepage
+#Instructor
+-Login with username as coursename_instructor and password as coursenameabcd
+-Eg- Username-COL100_instructor Password-col100abcd select Instructor in dropdown Login
+-Click on Publish /Grades to publish grades as well as see the existing grades
+-Click on Documents to View/Download/upload Documents/studymaterial etc
+-Click on Quizzes to add Questions and see QuestionBank
+-Click on Announcements to announce and send messages to all the students and also view existing announcements
+-Click on Dashboard to return to homepage
 
 
-Admin:
-Select admin in dropdown
-Login as Admin to add/view instructors/students and other models
+#Admin:
+-Select admin in dropdown
+-Login as Admin to add/view instructors/students and other models
 
 
 
